@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: ShippingService
+Implementation-Version: 1.0
+Built-By: PV00434293
+Implementation-Vendor-Id: ShippingService
+Build-Jdk: 1.8.0_45
+Implementation-URL: http://projects.spring.io/spring-boot/ShippingServ
+ ice/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

@@ -1,0 +1,170 @@
+<br>
+<div class="jumbotron" ng-init="showInvoice()">
+
+	<table align="center">
+		<tr>		
+			<td><h2><b style="color:green">{{productcookie.itemName}}</b> Order Invoice </h2><br></td>
+			
+		</tr>
+	</table>
+	<form >
+	<table align="center">
+		
+		<tr>
+			<td align="left"> <img ng-src="images/{{productcookie.id}}.jpg" width="300"
+							height="280" /> </td>
+			<td width="60px">&nbsp;</td>
+			<td width="3%" style="border-left: 1px solid #cdd0d4;"></td>
+			
+			<td width="60px">&nbsp;</td>
+			<td align="right">
+				<table width="40%">
+					<tr>
+						<td><b><h3 style="color: blue;">Payment Mode : </h3></b></td>
+					</tr>
+					<tr align="left">						
+						<td>
+						<input type="radio" ng-model="paymentMode" name="paymentMode" value="Cash On Delivery" checked="true">Cash On Delivery<br>
+						<input type="radio" ng-model="paymentMode" name="paymentMode" value="Net Banking">Net Banking<br>
+						<input type="radio" ng-model="paymentMode" name="paymentMode" value="Card On Delivery">Card On Delivery<br>
+						<input type="radio" ng-model="paymentMode" name="paymentMode" value="Debit Card">Debit Card<br>
+						</td>
+					</tr>
+					<tr>
+						<td><b><h3 style="color: blue;">Address to deliver :</h3></b></td>
+					</tr>	
+					<tr>					
+						<td>				
+						<textarea ng-model="address" rows="3" cols="30" ></textarea><br>						
+						</td>
+					</tr>								
+				</table> </td>
+			<td width="60px">&nbsp;</td>
+			<td width="3%" align="right" style="border-left: 1px solid #cdd0d4;">&nbsp;</td>			
+			<td>			
+				<table>
+				<tr>
+				
+					<td  colspan="4" align="center"><b style="color:red; "><h3>Price Details</h3></b></td>		
+				
+				</tr>
+		
+				<tr>
+					<td width="60px">&nbsp;</td>
+					<td align="right"><b>Product Name :</b></td>
+					
+					<td width="60px">&nbsp;</td>
+					<td align="right">{{productcookie.itemName}} </td>
+				</tr>
+				<tr>
+					<td width="60px">&nbsp;</td>
+					<td align="right">Price(1 item) :</td>
+					
+					<td width="60px">&nbsp;</td>
+					<td align="right">{{productcookie.cost}}</td>
+				</tr>
+				<tr>
+					<td width="60px">&nbsp;</td>
+					<td align="right">Ordered Quantity :</td>
+					
+					<td width="60px">&nbsp;</td>
+					<td align="right">{{productcookie.quantity}}<br></td>
+				</tr>
+				<tr>
+				<td style="border-bottom: 1px solid #cdd0d4;" colspan="4"><br></td>
+				</tr>
+				<tr>
+					<td width="60px">&nbsp;</td>
+					<td align="right"><b>Amount Payable :</b></td>
+					
+					<td width="60px">&nbsp;</td>
+					<td align="right"><b>{{productcookie.quantity * productcookie.cost}}</b></td>
+				</tr>
+				
+					
+				</table>	
+				
+			</td>
+					
+		</tr>
+		<tr>
+		<td colspan="8"align="center"><br><button type="button" class="btn btn-primary"
+							data-ng-click="confirmOrder(paymentMode,address)">Confirm Order</button></td>
+		</tr>
+		
+		
+	</table>
+	
+	
+	
+	</form>
+</div>
+	
+	
+	
+	
+	
+
+<!-- 
+<br>
+
+
+	<h1><center>Order Invoice</center></h1>
+	
+	
+	
+
+	<div class="jumbotron" ng-init="showInvoice()">
+	
+	
+	
+	
+			<table align="center" style="width: 500px; height: 50px">
+				<tbody>
+					<tr>
+						<td><img ng-src="images/{{productcookie.id}}.jpg" width="150"
+							height="150" /></td>
+						   <td>Product Name : <i><b>{{productcookie.itemName}}</b></i> <br>
+							Price : {{productcookie.cost}} <br> Ordered
+							Quantity:{{productcookie.quantity}} <br> Total Amount to be
+							Paid:{{productcookie.quantity * productcookie.cost}} <br> Payment Mode: {{paymentMode}}</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+
+			<table align="center" style="width: 500px; height: 50px">
+				<tbody>
+					<tr>
+						
+						<td></td>
+					     <td>Customer Name #1 : {{userfname}} <br> Email Id : {{useremail}} <br>
+							Mobile No: {{userphnum}} <br> Address: {{useraddr}} <br>
+						</td> 
+						 <td>Customer Name : {{userfname}} <br> Email Id : {{useremail}} <br>
+							Mobile No: {{userphnum}} <br> Address: {{useraddr}} <br>
+						</td> 
+						
+			
+					</tr>
+				</tbody>
+			</table>
+		
+		<br> <br>
+		<div class="col-sm-10 text-center">
+			<button type="button" class="btn btn-primary"
+				data-ng-click="confirmOrder()">Confirm Order</button>
+		</div>
+	</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+ <br>
+
+
+
+ -->

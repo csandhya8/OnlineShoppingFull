@@ -1,0 +1,9 @@
+com\tech\cadt\hystrixdashboard\UpdateCatalogueService.class
+com\tech\cadt\hystrixdashboard\CreateCatalogueService.class
+com\tech\cadt\ApplicationConfig.class
+com\tech\cadt\product\repository\ProductRepository.class
+com\tech\cadt\CatalogueService.class
+com\tech\cadt\hystrixdashboard\GetAllCatalogueService.class
+com\tech\cadt\product\entity\Product.class
+com\tech\cadt\catalogue\rest\CatalogueServiceController.class
+com\tech\cadt\ApplicationConfig$JerseyConfig.class

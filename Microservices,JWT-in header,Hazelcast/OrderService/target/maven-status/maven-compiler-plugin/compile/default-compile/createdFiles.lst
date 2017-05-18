@@ -1,0 +1,9 @@
+com\tech\cadt\order\rest\OrderRestServiceController.class
+com\tech\cadt\order\entity\OrderProduct.class
+com\tech\cadt\ApplicationConfig.class
+com\tech\cadt\hystrixdashboard\GetOrderService.class
+com\tech\cadt\hystrixdashboard\GetOrderByCustomer.class
+com\tech\cadt\OrderService.class
+com\tech\cadt\hystrixdashboard\CreateOrderService.class
+com\tech\cadt\OrderRepository.class
+com\tech\cadt\ApplicationConfig$JerseyConfig.class

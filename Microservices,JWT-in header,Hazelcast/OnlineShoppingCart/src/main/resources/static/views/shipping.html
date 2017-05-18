@@ -1,0 +1,115 @@
+<br>
+<div align="center"> <b><h2>Product InVoice</h2></b> </div>
+
+<div ng-init="showShippingDetails()">
+
+	<table width="70%" align="center">
+	<tr>
+		<td> <h3>Order Details</h3> </td>
+	</tr>
+	<tr>
+		<td> Ordered on {{orderedDetails.orderDate | date:'dd MMM yyyy'}}  &nbsp; |  &nbsp; Order# {{orderedDetails.orderId}}<br></td>
+	
+	</tr>
+	
+	<tr>
+	<td>
+	<br>
+		<table border="0" cellpadding="30px" style="border:1px solid #808080;" width="100%">
+		
+		<tr>
+			<td width="5%"></td>
+			<td width="25%"><b><h4>Shipping Address</h4></b></td>
+			<td width="10%"></td>
+			<td width="20%"><b><h4>Payment Method</h4></b></td>
+			<td width="10%"></td>
+			<td width="30%"><b><h4>Order Summary</h4></b> </td>
+		</tr>
+		<tr>
+		<td width="5%"></td>
+			<td width="25%">{{shippedDetails.deliveryAddress}}</td>
+			<td width="10%"></td>
+			<td width="20%">{{orderedDetails.paymentMode}}</td>
+			<td width="10%"></td>
+			<td width="30%"> 
+
+			<table align="center" >		
+			<tr>
+				<td width="35%" > Quantity : <br> Sub Total :  </td>
+				<td align="right" width="15%" > {{orderedDetails.orderQuantity}}<br> {{orderedDetails.totalAmt}} </td>
+				<td width="4%"></td>
+				
+			</tr>
+			
+			
+			<tr>
+				<td > <b>Grand Total</b> </td>
+				<td align="right"> <b>{{orderedDetails.totalAmt}}</b> </td>
+			</tr>
+			</table>
+<br>
+			</td>
+		</tr>
+		</table>
+		<br><br>
+	</td>
+	
+	</tr>
+	</table>
+	
+	
+	<table  width="70%" align="center" style="border:1px solid #808080; padding: 100">
+	<!-- 
+	<tr>
+		<td width="5%"></td>
+		<td> <b><h4 style="color: red">Payment revision needed</h4></b></td>
+	</tr>
+	<tr>
+		<td width="5%"></td>
+		<td>Please update the payment method to proceed with your order.</td>
+	</tr>
+	 -->
+	
+		<tr>
+		<td width="5%"></td>
+			<td>
+				<div> <b><h4 style="color: red">Payment revision needed</h4></b> </div>
+				<div>Please update the payment method to proceed with your order.<br></div>
+				<div>
+				<br>
+				<table width="100%">
+				<tr >
+					<td width="150"><img ng-src="images/{{productcookie.id}}.jpg" width="100"
+							height="100" /> &nbsp; </td>
+					<td>{{productcookie.itemName}} <br>
+					
+					 &#8377; <b style="color: red">{{productcookie.cost}}</b><br>
+					Sold by : <i style="color: blue;">Amazon</i><br>
+					BRAND NEW <br>
+					<button class="btn btn-primary" data-ng-click="shippingStatus(orderedDetails.orderId)"> Get Shipping Status</button><br>
+					
+					
+					</td>
+					<td ng-show="showStatus">
+					<b style="color:blue">Your Shipping Status:</b>
+					<br>
+					{{status.status}}
+					</td>
+				</tr>
+				</table>	
+					<br>
+				</div>
+				
+			</td>
+		</tr>
+		
+	</table>
+	<br>
+	<table width="70%" align="center">
+	<tr>
+		<td width="5%"></td>
+		<td align="center"><br><button type="submit" class="btn btn-success" data-ng-click="cancel()"
+			>Close</button></td>
+		</tr>
+	</table>
+</div>

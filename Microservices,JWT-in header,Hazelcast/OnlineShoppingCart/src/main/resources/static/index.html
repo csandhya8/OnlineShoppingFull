@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html data-ng-app="microservice">
+<head>
+
+<title>Online Shopping</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="lib/menu.css">
+<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="lib/bootstrap.min.js"></script>
+<script src="lib/angular.min.js"></script>
+<script src="lib/angular-route.min.js"></script>
+<script src="lib/angular-cookies.min.js"></script>
+<script src="lib/angular-cookies.js"></script>
+<script src="app/app.js"></script>
+<script src="controller/homeController.js"></script>
+<script src="controller/loginController.js"></script>
+<script src="controller/successController.js"></script>
+<script src="controller/orderController.js"></script>
+<script src="controller/shippingController.js"></script>
+<script src="controller/productController.js"></script>
+
+<script src="service/loginService.js"></script>
+<script src="service/successService.js"></script>
+<script src="service/orderService.js"></script>
+<script src="service/productService.js"></script>
+<script src="service/shippingService.js"></script>
+<style type="text/css">
+
+/* Remove the navbar's default rounded borders and increase the bottom margin */
+.navbar {
+	margin-bottom: -20px;
+	border-radius: 0;
+	
+}
+
+/* Remove the jumbotron's default bottom margin */
+.jumbotron {
+	margin-bottom: 0;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+	padding: 5px;
+}
+
+#logo {
+	text-align: center;
+}
+
+#footer {
+	background-color: #555;
+	color: white;
+	/* padding: 15px; */
+}
+
+#logo {
+	text-align: center;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+.row.content {
+	background-image: url("images/loginbackground.jpg");
+	background-repeat: no-repeat;
+	height: 648px;
+}
+</style>
+
+</head>
+
+<body ng-controller="loginController">
+
+
+
+
+
+<div>
+
+
+</div>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#myNavbar">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><b>Online Shopping</b></a>
+			</div>
+
+
+		
+
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+
+				<ul align="right" class="nav navbar-nav navbar-right" id="menu">
+
+		
+				 	<li ><a href="#login"  data-ng-show="!isLogin"><span class="glyphicon glyphicon-log-in"> Login </span></a></li>
+						<li><a href="#success" data-ng-show="isLogout"><span class="glyphicon glyphicon-home"> Home </span></a></li>
+					
+					<li><a href="#trackOrder" data-ng-show="isLogout"><span class="glyphicon glyphicon-map-marker"> TrackOrder </span></a></li>
+					
+				
+				  	<li  data-ng-show="isLogout"><a href="">Welcome {{customerName}}</a>
+						<ul>
+						
+							<li><a href="orders">My Profile</a></li>
+							<li><a href="#logout"  data-ng-click = "logout()" data-ng-show="isLogout">Logout</a></li>
+						
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</nav>
+	
+	
+	<br>
+	<div ng-view></div>
+
+
+
+
+</body>
+
+
+
+</html>

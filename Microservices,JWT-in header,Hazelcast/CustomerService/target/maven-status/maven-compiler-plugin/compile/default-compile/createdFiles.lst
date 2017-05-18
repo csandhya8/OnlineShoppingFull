@@ -1,0 +1,6 @@
+com\techm\customerservice\hystrixdashboard\CreateCustomerService.class
+com\techm\customerservice\controller\CustomerController.class
+com\techm\customerservice\repository\CustomerRepository.class
+com\techm\customerservice\hystrixdashboard\GetCustomer.class
+com\techm\customerservice\OnlineShoppingCart.class
+com\techm\customerservice\entity\Customer.class

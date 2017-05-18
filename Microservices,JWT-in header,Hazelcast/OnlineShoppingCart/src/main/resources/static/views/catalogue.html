@@ -1,0 +1,43 @@
+<br>
+<br><br>
+<div class="container">
+	<div class="row">		
+		<div class="col-xs-12" ng-init="getAllProducts()">
+			<div class="col-xs-4" ng-repeat="product in returndata">
+				<div class="col-xs-12"><i><label>{{product.itemName}}</label></i></div>
+				<div>
+					<img ng-src="images/{{product.id}}.jpg" width="250" height="150" />
+				</div>					
+				<br>
+				<div class="col-xs-12">
+					<button type="submit" class="btn btn-success col-xs-6" ng-click="buy(product)">View</button>
+				</div>
+				<br> <br> <br>
+			</div>
+			<br>
+		</div>		
+	</div>
+</div>
+
+
+<!-- 
+<br><br>
+<hr>
+<div >
+<div class="container">
+<center><div><h2>Welcome !!!</h2></div>
+<br><br><br><br><br><br>
+<div><h2><b><marquee behavior="slide" direction="right">You are now inside the order Service</marquee></h2></b></div>
+
+<br><br><br><br><br><br><br><br><br>
+
+<font color= "red"><b><div>JWT Token</div></b></font>
+<div ng-init ="showOrder()">{{msg}}</div>
+</center>
+
+</div>
+<br>
+</div>
+<br><br><br><br>
+
+ -->

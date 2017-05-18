@@ -1,0 +1,112 @@
+<br>
+
+
+<form name="productForm">
+	<div ng-init="showProduct()">
+	
+	<table width="60%" align="center">
+		
+			
+			</table>
+		
+		<!-- <div class="col-xs-6"> -->
+		<br>
+		<table width="80%" align="center">		
+			<tr>
+				<td align="center" colspan="6"><h2 align="center"><b style="color: green;">{{selectproductcookie.itemName}} </b>Product Details</h2>
+				
+				<br>
+				</td>
+			</tr>
+			<tr>
+				<td ><img ng-src="images/{{selectproductcookie.id}}.jpg" width="250" height="220" /></td>	
+				<td width="2%" style="border-left: 1px solid #cdd0d4;">
+				<td >
+					<table>
+						
+						<tr align="center">
+							<td width="1%"></td>
+							<td align="right"><b style="color: red;">In Stock</b> : </td>
+							<td align="right"><b>{{selectproductcookie.availableitems}}</b></td>
+						
+						</tr>
+						<tr align="center">
+							<td width="1%"></td>
+							<td align="right"><br><b style="color: red;">Price</b> : </td>
+							<td align="right"><br>&#8377; <b>{{selectproductcookie.cost}}</b></td>
+						
+						</tr>
+						<tr>
+							<td width="1%"></td>
+							<td align="left"><br><b>Choose Quantity required:</b></td>
+							<TD></TD>
+						</tr>
+						<tr>
+							<td width="1%"></td>
+							<td align="right"><br><b style="color: red;">Quantity</b> : </td>
+							<td align="right" ><br><input class="form-control" id="quantity" type="number"
+								min="{{min}}" max="{{selectproductcookie.availableitems}}"
+								ng-model="product.quantity" required style="width: 90px; height: 30px"></td>
+						</tr>
+						
+						<tr>
+							<td width="1%"></td>
+							<td align="right"><br><button type="button" class="btn btn-primary" data-ng-click="order(product)"
+							ng-disabled="productForm.$invalid">Order Now</button></td>
+							<td align="center"><br><button type="button" class="btn btn-primary"
+							data-ng-click="cancel()">Cancel</button></td>
+						
+						</tr>
+					
+					</table>	
+				</td>
+				<td width="40px"></td>	
+				<td width="3%" style="border-left: 1px solid #cdd0d4;"></td>
+				<td>
+				<table>
+					<tr>
+						<td><b>{{selectproductcookie.itemName}}</b></td>
+					</tr>
+					<tr>
+						<td><img src="../images/rating.png" width="80" height="20"><hr></td>				
+					</tr>			
+					<tr>
+						<td><b> &#8377; {{selectproductcookie.cost}}</b></td>
+					</tr>
+					<tr>
+						<td> Emi starts from {{selectproductcookie.cost/4}}/month</td>
+					</tr>
+					<tr>
+						<td> <b style="color: blue;">Cash on Delivery</b> is eligible</td>
+					</tr>
+					<tr>
+						<td> <h4>Product Details:</h4></td>
+					</tr>
+					<tr>
+						<td>{{selectproductcookie.description}}: <br>
+						<ul>
+							<li>1 year manufacturer warranty for Product</li>
+							<li>6 months manufacturer warranty for accessories</li>
+							<li>Weight is 20 Grams</li>
+							<li>In-box accessories including batteries</li>
+						</ul>
+						</td>
+					</tr>
+				
+					</table>			
+				
+				</td>
+			</tr>
+			
+		
+		</table>
+			
+	</div>
+		
+
+</form>
+
+
+
+
+
